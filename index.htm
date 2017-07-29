@@ -5,59 +5,61 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexming.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>各縣市局處單位</title>
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top ">
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<a class="navbar-brand" href="#">各縣市局處單位</a>
+		<a class="navbar-brand" >各縣市局處單位</a>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">北部</a>
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">北部</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item administrative-area" data-document="14-keelung" href="#">基隆市</a>
-						<a class="dropdown-item administrative-area" data-document="01-taipei" href="#">臺北市</a>
-						<a class="dropdown-item administrative-area" data-document="02-newtaipei" href="#">新北市</a>
-						<a class="dropdown-item administrative-area" data-document="03-taoyuan" href="#">桃園市</a>
-						<a class="dropdown-item administrative-area" data-document="04-hsinchu" href="#">新竹市</a>
+						<a class="dropdown-item administrative-area" data-document="14-keelung" href="#Keelung">基隆市</a>
+						<a class="dropdown-item administrative-area" data-document="01-taipei" href="#Taipei">臺北市</a>
+						<a class="dropdown-item administrative-area" data-document="02-newtaipei" href="#Newtaipei">新北市</a>
+						<a class="dropdown-item administrative-area" data-document="03-taoyuan" href="#Taoyuan">桃園市</a>
+						<a class="dropdown-item administrative-area" data-document="04-hsinchu" href="#Hsinchu">新竹市</a>
 						<a class="dropdown-item administrative-area disabled" href="#">新竹縣</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">中部</a>
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">中部</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item administrative-area" data-document="15-miaoli" href="#">苗栗縣</a>
-						<a class="dropdown-item administrative-area" data-document="08-taichung" href="#">臺中市</a>
-						<a class="dropdown-item administrative-area" data-document="16-changhua" href="#">彰化縣</a>
-						<a class="dropdown-item administrative-area" data-document="11-nantou" href="#">南投縣</a>
-						<a class="dropdown-item administrative-area" data-document="17-yunlin" href="#">雲林縣</a>
+						<a class="dropdown-item administrative-area" data-document="15-miaoli" href="#Miaoli">苗栗縣</a>
+						<a class="dropdown-item administrative-area" data-document="08-taichung" href="#Taichung">臺中市</a>
+						<a class="dropdown-item administrative-area" data-document="16-changhua" href="#Changhua">彰化縣</a>
+						<a class="dropdown-item administrative-area" data-document="11-nantou" href="#Nantou">南投縣</a>
+						<a class="dropdown-item administrative-area" data-document="17-yunlin" href="#Yunlin">雲林縣</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">南部</a>
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">南部</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item administrative-area disabled" href="#">嘉義縣</a>
 						<a class="dropdown-item administrative-area disabled" href="#">嘉義市</a>
-						<a class="dropdown-item administrative-area" data-document="05-tainan" href="#">臺南市</a>
-						<a class="dropdown-item administrative-area" data-document="09-kaohsiung" href="#">高雄市</a>
+						<a class="dropdown-item administrative-area" data-document="05-tainan" href="#Tainan">臺南市</a>
+						<a class="dropdown-item administrative-area" data-document="09-kaohsiung" href="#Kaohsiung">高雄市</a>
 						<a class="dropdown-item administrative-area disabled" href="#">屏東縣</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">東部</a>
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">東部</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item administrative-area" data-document="06-ilan" href="#">宜蘭縣</a>
+						<a class="dropdown-item administrative-area" data-document="06-ilan" href="#Ilan">宜蘭縣</a>
 						<a class="dropdown-item administrative-area disabled" href="#">花蓮縣</a>
 						<a class="dropdown-item administrative-area disabled" href="#">臺東縣</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">外島</a>
+					<a class="nav-link dropdown-toggle"  data-toggle="dropdown">外島</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item administrative-area disabled" href="#">金門縣</a>
 						<a class="dropdown-item administrative-area disabled" href="#">澎湖縣</a>
@@ -67,10 +69,14 @@
 			</ul>
 		</div>
 		</nav>
+		<div id="tools">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button type="button" class="btn btn-secondary open-all">全部展開</button>
+				<button type="button" class="btn btn-secondary close-all">全部收合</button>
+			</div><br>
+		</div>
 	</header>
-	<div class="container">
-		<div id="svg">載入中...</div>
-	</div>
+	<div id="svg">載入中...</div>
 	<footer>
 
 	</footer>
@@ -78,6 +84,7 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.0/dist/svg-pan-zoom.min.js"></script>
 	<script src="js/all.js"></script>
 </body>
 </html>
