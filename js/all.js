@@ -1,14 +1,39 @@
 
 $(function(){
-	$.getJSON('js/data/01-taipei.json', function(r){
-		$('#svg').html('');
-		initData(r);
-	});
+	if(window.location.hash){
+		if(window.location.hash.length > 1){
+			var loc = window.location.hash.slice(1);
+			loc = loc.charAt(0).toLowerCase() + loc.slice(1);
+			var k = $('.administrative-area').filter(function(){
+				return $(this).data('document') && $(this).data('document').slice(3) === loc;
+			});
+			if(k.length === 0){
+				k = $('.administrative-area')[1];
+				loc = 'taipei';
+			}
+			var name = loc;
+			name = name.charAt(0).toUpperCase() + name.slice(1);
+			$.getJSON('js/data/'+ $(k).data('document') + '.json', function(r){
+				$('#svg').html('');
+				initData(r);
+				window.location.hash = name;
+			});
+		}
+	}else{
+		$.getJSON('js/data/01-taipei.json', function(r){
+			$('#svg').html('');
+			initData(r);
+			window.location.hash = "Taipei";
+		});
+	}
 	$('.administrative-area').on('click', function(){
 		if($(this).data('document')){
+			var name = $(this).data('document').split('-')[1];
+			name = name.charAt(0).toUpperCase() + name.slice(1);
 			$.getJSON('js/data/'+ $(this).data('document') + '.json', function(r){
 				$('#svg').html('');
 				initData(r);
+				window.location.hash = name;
 			});
 		}
 	});
@@ -159,7 +184,6 @@ function initData(datahere){
 		}
 
 		function click(d) {
-			console.log(d);
 			if (d.children) {
 				d._children = d.children;
 				d.children = null;
